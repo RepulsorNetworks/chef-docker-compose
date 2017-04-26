@@ -8,7 +8,7 @@
 #
 
 include_recipe 'docker' if node['docker-compose']['include_docker']
-include_recipe 'python::default'
+python_runtime '2'
 
 directory 'compose.d' do
   path  node['docker-compose']['config_directory']
